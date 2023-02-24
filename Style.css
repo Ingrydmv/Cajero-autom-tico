@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {    
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+
+body {
+  background-image: url("./IMG/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow-y: hidden;
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  background: linear-gradient(145deg,#f0f0f0, #cacaca);
+  box-shadow:  0px 0px 8px #125966;
+  margin: 20px 4px;
+}
+
+input {
+  outline: none;
+  height: 45px;
+  width: 250px;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 20px ;
+}
+
+input:focus{
+  outline: none;
+}
+
+input::placeholder{
+  text-align: center;
+}
+
+.Cajero {
+    display: grid;
+    place-items: center;
+    width: 950px;
+    height: 700px;
+    background-color :rgba(255, 255,255, 0.65);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255,255, 0.325);
+    text-align: center;
+}
+
+.Logo_Mesa {
+  width: 300px;
+  margin-top: 40px;
+}
+
+.opcionescajero, .claveusuario, .ingresousuario, .versaldo, .agregarsaldo, .retirarsaldo {
+display: none; 
+}
+
+.bienvenida h2{
+  font-size: 50px;
+}
+
+

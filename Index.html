@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="Style.css"/>
+    <link rel="shortcut icon" href="./IMG/Favicon_Mesa de trabajo 1.png"/>
+    <title>Cajero Automático</title>
+</head>
+<body>
+    <section class="Cajero">
+        <img src="./IMG/Logo_Mesa de trabajo 1.png" class="Logo_Mesa" alt="">
+        <section class="bienvenida" id="bienvenida">
+            <h2>Bienvenido a MMV</h2>
+            <button onclick=ocultarSecciones(seccion_bienvenida,seccion_ingresousuario)>Ingresar</button>
+        </section>
+        <!--INGRESO CAJERO-->
+        <section class="ingresousuario" id="ingresousuario">
+            <h2>Selecciona tu usuario</h2>
+            <button onclick="ingresousuario(0)">Mali</button>
+            <button onclick="ingresousuario(1)">Gera</button>
+            <button onclick="ingresousuario(2)">Maui</button>
+        </section>
+        <!--CLAVE USUARIO-->
+        <section class="claveusuario" id="claveusuario">
+            <h2>Selecciona tu clave</h2>
+            <input id="password" type="password" placeholder="ingresa tu clave">
+            <button onclick="revisarPassword()">Ingresar</button>
+            <button type="button" onclick="ocultarSecciones(seccion_claveusuario,seccion_ingresousuario)">Regresar</button>
+        </section>
+        <!--OPCIONES CAJERO-->
+        <section class="opcionescajero" id="opcionescajero"> 
+            <h2>¿Qué deseas hacer hoy?</h2>
+            <button onclick="versaldo()">Ver saldo</button>
+            <button onclick="ocultarSecciones(seccion_opcionescajero, seccion_agregarsaldo)">Ingresar saldo</button>
+            <button onclick="ocultarSecciones(seccion_opcionescajero, seccion_retirarsaldo)">Retirar saldo</button>
+            <button type="button" onclick="ocultarSecciones(seccion_opcionescajero,seccion_ingresousuario)">Regresar</button>
+        </section>
+        <!--OPCIONES CAJERO // VER SALDO-->
+        <section class="versaldo" id="versaldo">
+            <h2 id="mostrarSaldo"></h2>
+            <button type="button" onclick="ocultarSecciones(seccion_versaldo,seccion_opcionescajero)">Regresar</button>
+        </section>
+        <!--OPCIONES CAJERO // INGRESAR SALDO-->
+        <section class="agregarsaldo" id="agregarsaldo">
+            <h2>¿Cuánto dinero quieres ingresar?</h2>
+            <input id="ingresarSaldo" type="number" placeholder="Ingresa un monto">
+            <button onclick="ingresarSaldo()">Ingresar saldo</button>
+            <h3 id="montoIngresado"></h3>
+            <h3 id="nuevoSaldoTotal"></h3>
+            <button type="button" onclick="ocultarSecciones(seccion_agregarsaldo,seccion_opcionescajero)">Regresar</button>
+        </section>
+        <!--OPCIONES CAJERO // RETIRAR SALDO-->
+        <section class="retirarsaldo" id="retirarsaldo">
+            <h2>¿Cuánto dinero quieres retirar?</h2>
+            <input id="montoRetirado" type="number" placeholder="Ingresa un monto diferente">
+            <button onclick="retirarSaldo()">Retirar saldo</button>
+            <h3 id="cantidadRetirada"></h3>
+            <h3 id="saldoTotalNuevo"></h3>
+            <button type="button" onclick="ocultarSecciones(seccion_retirarsaldo,seccion_opcionescajero)">Regresar</button>
+        </section>
+    </section>
+    <script src="./Script.js"></script>
+</body>
+</html>
